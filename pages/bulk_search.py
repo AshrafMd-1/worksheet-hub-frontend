@@ -16,7 +16,7 @@ if "flag_s" in st.session_state:
     del st.session_state.flag_s
 
 st.title('Bulk Search')
-st.write('Search for multiple worksheets by a range of roll numbers.')
+st.write('Search for multiple worksheets by a range of roll numbers. [ max : 20 ]')
 
 if "flag_b" not in st.session_state:
     st.session_state.flag_b = 0
