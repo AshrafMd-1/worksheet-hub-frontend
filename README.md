@@ -4,7 +4,7 @@ This is a tool to help you search for worksheets by roll number.
 
 ## Version
 
-1.0.0 - 2024-07-01
+1.0.1 - 2024-07-02
 
 ## Contributors
 

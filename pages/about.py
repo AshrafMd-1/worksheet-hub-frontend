@@ -11,7 +11,7 @@ st.markdown("""
 This is a tool to help you search for worksheets by roll number.
 
 ## Version
-1.0.0 - 2024-07-01
+1.0.1 - 2024-07-02
 
 ## Contributors
 - [Ashraf MD](https://www.linkedin.com/in/ashraf-mohammed-75932823a/) **Tech Lead**
@@ -19,4 +19,4 @@ This is a tool to help you search for worksheets by roll number.
 
 st.markdown("""# Made with ❤️ by :rainbow[GDSC IARE]""")
 
-st.markdown("""> https://gdsc.community.dev/institute-of-aeronautical-engineering-hyderabad-india/""")
+st.markdown("""### [Join Us](https://gdsc.community.dev/institute-of-aeronautical-engineering-hyderabad-india/)""")
