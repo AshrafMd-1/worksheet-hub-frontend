@@ -1,0 +1,422 @@
+{
+  "05": {
+    "I Semester": {
+      "Theory": {
+        "AHSD02": "Matrices and Calculus",
+        "AHSD03": "Engineering Chemistry",
+        "AHSD07": "Applied Physics",
+        "ACSD01": "Object Oriented Programming"
+      },
+      "Practical": {
+        "AHSD09": "Applied Physics Laboratory",
+        "ACSD02": "Object Oriented Programming with Java Laboratory",
+        "AHSD05": "Engineering Chemistry Laboratory",
+        "AMED03": "Engineering Graphics"
+      },
+      "Mandatory Course": {
+        "AHSD06": "Environmental Science"
+      },
+      "Skill Enhancement Project": {
+        "ACSD04": "Mobile Applications Development"
+      }
+    },
+    "II Semester": {
+      "Theory": {
+        "AHSD01": "Professional Communication",
+        "AHSD08": "Differential Equations and Vector Calculus",
+        "ACSD05": "Essentials of Problem Solving",
+        "AEED01": "Elements of Electrical and Electronics Engineering"
+      },
+      "Practical": {
+        "AHSD04": "Professional Communication Laboratory",
+        "ACSD06": "Programming for Problem Solving Laboratory",
+        "AMED02": "Manufacturing Practice",
+        "AEED03": "Electrical and Electronics Engineering Laboratory"
+      },
+      "Experiential Engineering Education (ExEEd)": {
+        "ACSD03": "Essentials of Innovation"
+      },
+      "Mandatory Course": {
+        "AHSD10": "Gender Sensitization"
+      }
+    }
+  },
+  "66": {
+    "I Semester": {
+      "Theory": {
+        "AHSD01": "Professional Communication",
+        "AHSD02": "Matrices and Calculus",
+        "AEED01": "Elements of Electrical and Electronics Engineering",
+        "ACSD01": "Object Oriented Programming"
+      },
+      "Practical": {
+        "AHSD04": "Professional Communication Laboratory",
+        "ACSD02": "Object Oriented Programming with Java Laboratory",
+        "AMED02": "Manufacturing Practice",
+        "AEED03": "Electrical and Electronics Engineering Laboratory"
+      },
+      "Experiential Engineering Education (ExEEd)": {
+        "ACSD03": "Essentials of Innovation"
+      },
+      "Mandatory Course": {
+        "AHSD06": "Environmental Science"
+      }
+    },
+    "II Semester": {
+      "Theory": {
+        "AHSD03": "Engineering Chemistry",
+        "AHSD07": "Applied Physics",
+        "AHSD08": "Differential Equations and Vector Calculus",
+        "ACSD05": "Essentials of Problem Solving"
+      },
+      "Practical": {
+        "AHSD05": "Engineering Chemistry Laboratory",
+        "AHSD09": "Applied Physics Laboratory",
+        "ACSD06": "Programming for Problem Solving Laboratory",
+        "AMED03": "Engineering Graphics"
+      },
+      "Mandatory Course": {
+        "AHSD10": "Gender Sensitization"
+      },
+      "Skill Enhancement Project": {
+        "ACSD04": "Mobile Applications Development"
+      }
+    }
+  },
+  "67": {
+    "I Semester": {
+      "Theory": {
+        "AHSD02": "Matrices and Calculus",
+        "AHSD03": "Engineering Chemistry",
+        "AHSD07": "Applied Physics",
+        "ACSD01": "Object Oriented Programming"
+      },
+      "Practical": {
+        "AHSD09": "Applied Physics Laboratory",
+        "ACSD02": "Object Oriented Programming with Java Laboratory",
+        "AHSD05": "Engineering Chemistry Laboratory",
+        "AMED03": "Engineering Graphics"
+      },
+      "Mandatory Course": {
+        "AHSD06": "Environmental Science"
+      },
+      "Skill Enhancement Project": {
+        "ACSD04": "Mobile Applications Development"
+      }
+    },
+    "II Semester": {
+      "Theory": {
+        "AHSD01": "Professional Communication",
+        "AHSD08": "Differential Equations and Vector Calculus",
+        "ACSD05": "Essentials of Problem Solving",
+        "AEED01": "Elements of Electrical and Electronics Engineering"
+      },
+      "Practical": {
+        "AHSD04": "Professional Communication Laboratory",
+        "ACSD06": "Programming for Problem Solving Laboratory",
+        "AMED02": "Manufacturing Practice",
+        "AEED03": "Electrical and Electronics Engineering Laboratory"
+      },
+      "Experiential Engineering Education (ExEEd)": {
+        "ACSD03": "Essentials of Innovation"
+      },
+      "Mandatory Course": {
+        "AHSD10": "Gender Sensitization"
+      }
+    }
+  },
+  "62": {
+    "I Semester": {
+      "Theory": {
+        "AHSD02": "Matrices and Calculus",
+        "AHSD03": "Engineering Chemistry",
+        "AHSD07": "Applied Physics",
+        "ACSD01": "Object Oriented Programming"
+      },
+      "Practical": {
+        "AHSD09": "Applied Physics Laboratory",
+        "ACSD02": "Object Oriented Programming with Java Laboratory",
+        "AHSD05": "Engineering Chemistry Laboratory",
+        "AMED03": "Engineering Graphics"
+      },
+      "Mandatory Course": {
+        "AHSD06": "Environmental Science"
+      },
+      "Skill Enhancement Project": {
+        "ACSD04": "Mobile Applications Development"
+      }
+    },
+    "II Semester": {
+      "Theory": {
+        "AHSD01": "Professional Communication",
+        "AHSD08": "Differential Equations and Vector Calculus",
+        "ACSD05": "Essentials of Problem Solving",
+        "AEED01": "Elements of Electrical and Electronics Engineering"
+      },
+      "Practical": {
+        "AHSD04": "Professional Communication Laboratory",
+        "ACSD06": "Programming for Problem Solving Laboratory",
+        "AMED02": "Manufacturing Practice",
+        "AEED03": "Electrical and Electronics Engineering Laboratory"
+      },
+      "Experiential Engineering Education (ExEEd)": {
+        "ACSD03": "Essentials of Innovation"
+      },
+      "Mandatory Course": {
+        "AHSD10": "Gender Sensitization"
+      }
+    }
+  },
+  "12": {
+    "I Semester": {
+      "Theory": {
+        "AHSD01": "Professional Communication",
+        "AHSD02": "Matrices and Calculus",
+        "AEED01": "Elements of Electrical and Electronics Engineering",
+        "ACSD01": "Object Oriented Programming"
+      },
+      "Practical": {
+        "AHSD04": "Professional Communication Laboratory",
+        "ACSD02": "Object Oriented Programming with Java Laboratory",
+        "AMED02": "Manufacturing Practice",
+        "AEED03": "Electrical and Electronics Engineering Laboratory"
+      },
+      "Experiential Engineering Education (ExEEd)": {
+        "ACSD03": "Essentials of Innovation"
+      },
+      "Mandatory Course": {
+        "AHSD06": "Environmental Science"
+      }
+    },
+    "II Semester": {
+      "Theory": {
+        "AHSD03": "Engineering Chemistry",
+        "AHSD07": "Applied Physics",
+        "AHSD08": "Differential Equations and Vector Calculus",
+        "ACSD05": "Essentials of Problem Solving"
+      },
+      "Practical": {
+        "AHSD05": "Engineering Chemistry Laboratory",
+        "AHSD09": "Applied Physics Laboratory",
+        "ACSD06": "Programming for Problem Solving Laboratory",
+        "AMED03": "Engineering Graphics"
+      },
+      "Mandatory Course": {
+        "AHSD10": "Gender Sensitization"
+      },
+      "Skill Enhancement Project": {
+        "ACSD04": "Mobile Applications Development"
+      }
+    }
+  },
+  "21": {
+    "I Semester": {
+      "Theory": {
+        "AHSD01": "Professional Communication",
+        "AHSD02": "Matrices and Calculus",
+        "AEED01": "Elements of Electrical and Electronics Engineering",
+        "ACSD01": "Object Oriented Programming"
+      },
+      "Practical": {
+        "AHSD04": "Professional Communication Laboratory",
+        "AEED03": "Electrical and Electronics Engineering Laboratory",
+        "ACSD02": "Object Oriented Programming with Java Laboratory",
+        "AMED01": "Engineering Workshop"
+      },
+      "Experiential Engineering Education (ExEEd)": {
+        "ACSD03": "Essentials of Innovation"
+      },
+      "Mandatory Course": {
+        "AHSD06": "Environmental Science"
+      }
+    },
+    "II Semester": {
+      "Theory": {
+        "AHSD03": "Engineering Chemistry",
+        "AHSD07": "Applied Physics",
+        "AHSD08": "Differential Equations and Vector Calculus",
+        "AMED04": "Engineering Mechanics"
+      },
+      "Practical": {
+        "AHSD05": "Engineering Chemistry Laboratory",
+        "AHSD09": "Applied Physics Laboratory",
+        "AMED05": "Computer Aided Engineering Drawing",
+        "ACSD06": "Programming for Problem Solving Laboratory"
+      },
+      "Mandatory Course": {
+        "AHSD10": "Gender Sensitization"
+      },
+      "Skill Enhancement Project": {
+        "ACSD07": "Mobile and Web Applications Development"
+      }
+    }
+  },
+  "04": {
+    "I Semester": {
+      "Theory": {
+        "AHSD01": "Professional Communication",
+        "AHSD02": "Matrices and Calculus",
+        "AEED02": "Electrical Circuits",
+        "ACSD01": "Object Oriented Programming"
+      },
+      "Practical": {
+        "AHSD04": "Professional Communication Laboratory",
+        "ACSD02": "Object Oriented Programming with Java Laboratory",
+        "AMED02": "Manufacturing Practice",
+        "AEED04": "Electrical Circuits Laboratory"
+      },
+      "Experiential Engineering Education (ExEEd)": {
+        "ACSD03": "Essentials of Innovation"
+      },
+      "Mandatory Course": {
+        "AHSD06": "Environmental Science"
+      }
+    },
+    "II Semester": {
+      "Theory": {
+        "AHSD03": "Engineering Chemistry",
+        "AHSD07": "Applied Physics",
+        "AHSD08": "Differential Equations and Vector Calculus",
+        "ACSD05": "Essentials of Problem Solving"
+      },
+      "Practical": {
+        "AHSD05": "Engineering Chemistry Laboratory",
+        "AHSD09": "Applied Physics Laboratory",
+        "ACSD06": "Programming for Problem Solving Laboratory",
+        "AMED03": "Engineering Graphics"
+      },
+      "Mandatory Course": {
+        "AHSD10": "Gender Sensitization"
+      },
+      "Skill Enhancement Project": {
+        "ACSD07": "Mobile and Web Applications Development"
+      }
+    }
+  },
+  "02": {
+    "I Semester": {
+      "Theory": {
+        "AHSD01": "Professional Communication",
+        "AHSD02": "Matrices and Calculus",
+        "AEED02": "Electrical Circuits",
+        "ACSD01": "Object Oriented Programming"
+      },
+      "Practical": {
+        "AHSD04": "Professional Communication Laboratory",
+        "ACSD02": "Object Oriented Programming with Java Laboratory",
+        "AMED02": "Manufacturing Practice",
+        "AEED04": "Electrical Circuits Laboratory"
+      },
+      "Experiential Engineering Education (ExEEd)": {
+        "ACSD03": "Essentials of Innovation"
+      },
+      "Mandatory Course": {
+        "AHSD06": "Environmental Science"
+      }
+    },
+    "II Semester": {
+      "Theory": {
+        "AHSD03": "Engineering Chemistry",
+        "AHSD07": "Applied Physics",
+        "AHSD08": "Differential Equations and Vector Calculus",
+        "ACSD05": "Essentials of Problem Solving"
+      },
+      "Practical": {
+        "AHSD05": "Engineering Chemistry Laboratory",
+        "AHSD09": "Applied Physics Laboratory",
+        "ACSD06": "Programming for Problem Solving Laboratory",
+        "AMED03": "Engineering Graphics"
+      },
+      "Mandatory Course": {
+        "AHSD10": "Gender Sensitization"
+      },
+      "Skill Enhancement Project": {
+        "ACSD07": "Mobile and Web Applications Development"
+      }
+    }
+  },
+  "03": {
+    "I Semester": {
+      "Theory": {
+        "AHSD01": "Professional Communication",
+        "AHSD02": "Matrices and Calculus",
+        "AEED01": "Elements of Electrical and Electronics Engineering",
+        "ACSD01": "Object Oriented Programming"
+      },
+      "Practical": {
+        "AHSD04": "Professional Communication Laboratory",
+        "AEED03": "Electrical and Electronics Engineering Laboratory",
+        "ACSD02": "Object Oriented Programming with Java Laboratory",
+        "AMED01": "Engineering Workshop"
+      },
+      "Experiential Engineering Education (ExEEd)": {
+        "ACSD03": "Essentials of Innovation"
+      },
+      "Mandatory Course": {
+        "AHSD06": "Environmental Science"
+      }
+    },
+    "II Semester": {
+      "Theory": {
+        "AHSD03": "Engineering Chemistry",
+        "AHSD07": "Applied Physics",
+        "AHSD08": "Differential Equations and Vector Calculus",
+        "AMED04": "Engineering Mechanics"
+      },
+      "Practical": {
+        "AHSD05": "Engineering Chemistry Laboratory",
+        "AHSD09": "Applied Physics Laboratory",
+        "AMED05": "Computer Aided Engineering Drawing",
+        "ACSD06": "Programming for Problem Solving Laboratory"
+      },
+      "Mandatory Course": {
+        "AHSD10": "Gender Sensitization"
+      },
+      "Skill Enhancement Project": {
+        "ACSD07": "Mobile and Web Applications Development"
+      }
+    }
+  },
+  "01": {
+    "I Semester": {
+      "Theory": {
+        "AHSD01": "Professional Communication",
+        "AHSD02": "Matrices and Calculus",
+        "AEED01": "Elements of Electrical and Electronics Engineering",
+        "ACSD01": "Object Oriented Programming"
+      },
+      "Practical": {
+        "AHSD04": "Professional Communication Laboratory",
+        "AEED03": "Electrical and Electronics Engineering Laboratory",
+        "ACSD02": "Object Oriented Programming with Java Laboratory",
+        "AMED01": "Engineering Workshop"
+      },
+      "Experiential Engineering Education (ExEEd)": {
+        "ACSD03": "Essentials of Innovation"
+      },
+      "Mandatory Course": {
+        "AHSD06": "Environmental Science"
+      }
+    },
+    "II Semester": {
+      "Theory": {
+        "AHSD03": "Engineering Chemistry",
+        "AHSD07": "Applied Physics",
+        "AHSD08": "Differential Equations and Vector Calculus",
+        "AMED04": "Engineering Mechanics"
+      },
+      "Practical": {
+        "AHSD05": "Engineering Chemistry Laboratory",
+        "AHSD09": "Applied Physics Laboratory",
+        "AMED05": "Computer Aided Engineering Drawing",
+        "ACSD06": "Programming for Problem Solving Laboratory"
+      },
+      "Mandatory Course": {
+        "AHSD10": "Gender Sensitization"
+      },
+      "Skill Enhancement Project": {
+        "ACSD07": "Mobile and Web Applications Development"
+      }
+    }
+  }
+}
