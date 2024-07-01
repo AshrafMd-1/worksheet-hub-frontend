@@ -1,5 +1,6 @@
 import json
 import re
+import time
 
 import streamlit as st
 
@@ -83,6 +84,7 @@ if st.session_state.flag_s > 0:
                     st.session_state.pdf_data_s["week_no"] = week_no
                     search = st.button('Search')
                     if search:
+                        start_time = time.time()
                         with st.spinner('Searching...'):
                             pdf_url = search_specific_worksheet(
                                 st.session_state.pdf_data_s["roll_number"],
@@ -90,6 +92,9 @@ if st.session_state.flag_s > 0:
                                 st.session_state.pdf_data_s["subject"],
                                 st.session_state.pdf_data_s["week_no"]
                             )
+                            end_time = time.time()
+                            execution_time = end_time - start_time
+                            st.write(f"Execution time: {execution_time:.2f} seconds")
                             if pdf_url:
                                 st.write(f'### [Open worksheet]({pdf_url})')
                             else:

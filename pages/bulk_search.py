@@ -1,5 +1,6 @@
 import json
 import re
+import time
 
 import pandas as pd
 import streamlit as st
@@ -94,6 +95,7 @@ if st.session_state.flag_b > 0:
                     st.session_state.pdf_data_b["week_no"] = week_no
                     search = st.button('Search')
                     if search:
+                        start_time = time.time()
                         with st.spinner('Searching...'):
                             pdf_urls = search_bulk_worksheet(
                                 bulk_rolls(
@@ -112,11 +114,14 @@ if st.session_state.flag_b > 0:
                                 else:
                                     df_link_available = df_link_available.reset_index(drop=True)
                                     df_link_available.index += 1
-                                    st.data_editor(df_link_available, use_container_width=True, column_config={
-                                        "Link": st.column_config.LinkColumn(
-                                            "Links", display_text="Open worksheet"
-                                        ),
-                                    })
-
+                                    end_time = time.time()
+                                    execution_time = end_time - start_time
+                                    st.write(f"Execution time: {execution_time:.2f} seconds")
+                                    st.data_editor(df_link_available, disabled=True, use_container_width=True,
+                                                   column_config={
+                                                       "Link": st.column_config.LinkColumn(
+                                                           "Links", display_text="Open worksheet"
+                                                       ),
+                                                   })
                             else:
                                 st.error('Error occurred while searching for worksheets.')
