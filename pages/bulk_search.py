@@ -16,7 +16,7 @@ if "flag_s" in st.session_state:
     del st.session_state.flag_s
 
 st.title('Bulk Search')
-st.write('Search for multiple worksheets by a range of roll numbers. [ max : 20 ]')
+st.write('Search for multiple worksheets by a range of roll numbers. [ max:25 ]')
 
 if "flag_b" not in st.session_state:
     st.session_state.flag_b = 0
@@ -33,6 +33,8 @@ if st.session_state.flag_b == 0:
     }
     check = st.button('Check')
     if check:
+        roll_number_first = roll_number_first.upper()
+        roll_number_last = roll_number_last.upper()
         if roll_number_first == roll_number_last:
             st.error('Roll numbers cannot be the same.')
             st.stop()

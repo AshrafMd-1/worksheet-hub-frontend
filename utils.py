@@ -60,7 +60,7 @@ def bulk_rolls(from_roll, to_roll):
     roll = []
     current_roll = from_roll
 
-    while current_roll != next_roll(to_roll) and len(roll) <= 20:
+    while current_roll != next_roll(to_roll) and len(roll) <= 25:
         roll.append(current_roll)
         current_roll = next_roll(current_roll)
 
