@@ -60,11 +60,32 @@ def bulk_rolls(from_roll, to_roll):
     roll = []
     current_roll = from_roll
 
-    while current_roll != next_roll(to_roll) and len(roll) <= 25:
+    while current_roll != next_roll(to_roll) and len(roll) <= 80:
         roll.append(current_roll)
         current_roll = next_roll(current_roll)
 
     return roll
+
+
+def bulk_rolls_count(from_roll, to_roll):
+    from_roll = from_roll.upper()
+    to_roll = to_roll.upper()
+    roll = []
+    current_roll = from_roll
+
+    while current_roll != next_roll(to_roll) and len(roll) <= 80:
+        roll.append(current_roll)
+        current_roll = next_roll(current_roll)
+
+    if roll[-1].upper() == to_roll.upper():
+        return {
+            "status": "not exceeded",
+        }
+    else:
+        return {
+            "status": "exceeded",
+            "roll": roll[-1].upper()
+        }
 
 
 def search_bulk_worksheet(rolls, sem, sub, week):
@@ -79,3 +100,19 @@ def search_bulk_worksheet(rolls, sem, sub, week):
         return None
     else:
         return pdf_urls
+
+
+def search_bulk_worksheet_v2(roll_f, roll_l, sem, sub, week):
+    pdf_url = f"https://worksheethub-1-v9612928.deta.app/bulk"
+    payload = {
+        "roll_f": roll_f,
+        "roll_l": roll_l,
+        "sem": sem,
+        "sub": sub,
+        "week": week
+    }
+    res = requests.post(pdf_url, json=payload)
+    if res.status_code == 200:
+        return res.json()
+    else:
+        return None

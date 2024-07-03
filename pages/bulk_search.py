@@ -6,7 +6,7 @@ import pandas as pd
 import streamlit as st
 
 from menu import menu
-from utils import roman_to_digits, search_bulk_worksheet, bulk_rolls
+from utils import roman_to_digits, search_bulk_worksheet_v2, bulk_rolls_count
 
 st.set_page_config(page_title="Bulk", page_icon="📖", layout="centered")
 
@@ -16,7 +16,7 @@ if "flag_s" in st.session_state:
     del st.session_state.flag_s
 
 st.title('Bulk Search')
-st.write('Search for multiple worksheets by a range of roll numbers. [ max:25 ]')
+st.write('Search for multiple worksheets by a range of roll numbers. **{max 80 roll numbers}**')
 
 if "flag_b" not in st.session_state:
     st.session_state.flag_b = 0
@@ -25,33 +25,46 @@ if "pdf_data_b" not in st.session_state:
     st.session_state.pdf_data_b = {}
 
 if st.session_state.flag_b == 0:
-    roll_number_first = st.text_input('Enter first roll number', key=1)
-    roll_number_last = st.text_input('Enter last roll number', key=2)
-    st.session_state.pdf_data_b = {
-        "roll_number_first": roll_number_first.upper(),
-        "roll_number_last": roll_number_last.upper()
-    }
-    check = st.button('Check')
-    if check:
-        roll_number_first = roll_number_first.upper()
-        roll_number_last = roll_number_last.upper()
-        if roll_number_first == roll_number_last:
-            st.error('Roll numbers cannot be the same.')
-            st.stop()
-        if roll_number_first[:8] != roll_number_last[:8]:
-            st.error('First 8 characters of roll numbers should be same.')
-            st.stop()
-        pattern = r'^\d+A\d+\w*$'
-        if re.match(pattern, roll_number_first.upper()) and re.match(pattern, roll_number_last.upper()) and len(
-                roll_number_first) == 10 and len(roll_number_last) == 10:
-            st.session_state.flag_b = 1
-            st.rerun()
-        else:
-            st.error('Invalid roll number. Please enter a valid roll number.')
+    with st.form(key='bulk_search'):
+        roll_number_first = st.text_input('Enter first roll number', key=1)
+        roll_number_last = st.text_input('Enter last roll number', key=2)
+        check = st.form_submit_button('Submit')
+        if check:
+            roll_number_first = roll_number_first.upper()
+            roll_number_last = roll_number_last.upper()
+            if not roll_number_first or not roll_number_last:
+                st.error('Please enter both roll numbers.')
+                st.stop()
+            if roll_number_first == roll_number_last:
+                st.error('Roll numbers cannot be the same.')
+                st.stop()
+            if roll_number_first[:8] != roll_number_last[:8]:
+                st.error('First 8 characters of roll numbers should be same.')
+                st.stop()
+            pattern = r'^\d+A\d+\w*$'
+            if re.match(pattern, roll_number_first.upper()) and re.match(pattern, roll_number_last.upper()) and len(
+                    roll_number_first) == 10 and len(roll_number_last) == 10:
+                bulk_roll_count = bulk_rolls_count(roll_number_first, roll_number_last)
+                exceed_status = False
+                if bulk_roll_count["status"] == "exceeded":
+                    exceed_status = True
+                    roll_number_last = bulk_roll_count["roll"].upper()
+                st.session_state.pdf_data_b = {
+                    "roll_number_first": roll_number_first.upper(),
+                    "roll_number_last": roll_number_last.upper(),
+                    "exceeded": exceed_status
+                }
+                st.session_state.flag_b = 1
+                st.rerun()
+            else:
+                st.error('Invalid roll number. Please enter a valid roll number.')
 
 if st.session_state.flag_b > 0:
     st.text_input('Roll number first', value=st.session_state.pdf_data_b["roll_number_first"], key=1, disabled=True)
     st.text_input('Roll number last', value=st.session_state.pdf_data_b["roll_number_last"], key=2, disabled=True)
+    if st.session_state.pdf_data_b["exceeded"]:
+        st.info(
+            f"You can search for maximum 80 roll numbers. Auto assigned to {st.session_state.pdf_data_b['roll_number_last']}")
     edit = st.button('Edit')
     if edit:
         st.session_state.flag_b = 0
@@ -99,11 +112,9 @@ if st.session_state.flag_b > 0:
                     if search:
                         start_time = time.time()
                         with st.spinner('Searching...'):
-                            pdf_urls = search_bulk_worksheet(
-                                bulk_rolls(
-                                    st.session_state.pdf_data_b["roll_number_first"],
-                                    st.session_state.pdf_data_b["roll_number_last"]
-                                ),
+                            pdf_urls = search_bulk_worksheet_v2(
+                                st.session_state.pdf_data_b["roll_number_first"],
+                                st.session_state.pdf_data_b["roll_number_last"],
                                 st.session_state.pdf_data_b["semester"],
                                 st.session_state.pdf_data_b["subject"],
                                 st.session_state.pdf_data_b["week_no"]
