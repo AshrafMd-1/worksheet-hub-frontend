@@ -18,10 +18,11 @@ st.header('Bulk Search')
 st.write('Search for multiple worksheets by a range of roll numbers.')
 
 hide_st_style = """
-
+<style>
 #MainMenu {visibility: hidden;}
 footer {visibility: hidden;}
 header {visibility: hidden;}
+</style>
 """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
