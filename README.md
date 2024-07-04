@@ -8,11 +8,11 @@ This is a tool to help you search for worksheets by roll number.
 
 ## Fixes
 
-- Offloaded bulk search to external server for faster processing [ 1m 12s -> 15s ]
+- Offloaded bulk search to external server for faster processing [ 1m 12s ➡️ 15s ]
 - Increased bulk search limit to 80 roll numbers
 - Minor UI improvements
 
-## Contributors
+## Developer
 
 - [Ashraf MD](https://www.linkedin.com/in/ashraf-mohammed-75932823a/) **Tech Lead**
 
