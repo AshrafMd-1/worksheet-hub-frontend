@@ -24,18 +24,23 @@ if "pdf_data_s" not in st.session_state:
     st.session_state.pdf_data_s = {}
 
 if st.session_state.flag_s == 0:
-    roll_number = st.text_input('Enter roll number')
-    st.session_state.pdf_data_s = {
-        "roll_number": roll_number.upper()
-    }
-    check = st.button('Check')
-    if check:
-        pattern = r'^\d+A\d+\d*$'
-        if re.match(pattern, roll_number.upper()) and len(roll_number) == 10:
-            st.session_state.flag_s = 1
-            st.rerun()
-        else:
-            st.error('Invalid roll number. Please enter a valid roll number.')
+    with st.form('specific_search'):
+        roll_number = st.text_input('Enter roll number')
+        check = st.form_submit_button('Submit')
+        if check:
+            roll_number = roll_number.upper()
+            if not roll_number:
+                st.error('Please enter a roll number.')
+                st.stop()
+            pattern = r'^\d+A\d+\d*$'
+            if re.match(pattern, roll_number) and len(roll_number) == 10:
+                st.session_state.pdf_data_s = {
+                    "roll_number": roll_number
+                }
+                st.session_state.flag_s = 1
+                st.rerun()
+            else:
+                st.error('Invalid roll number. Please enter a valid roll number.')
 
 if st.session_state.flag_s > 0:
     st.text_input('Roll number', value=st.session_state.pdf_data_s["roll_number"], key=1, disabled=True)

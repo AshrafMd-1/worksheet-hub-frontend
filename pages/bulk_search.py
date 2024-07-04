@@ -6,7 +6,7 @@ import pandas as pd
 import streamlit as st
 
 from menu import menu
-from utils import roman_to_digits, search_bulk_worksheet_v2, bulk_rolls_count
+from utils import roman_to_digits, search_bulk_worksheet_v2, bulk_rolls_count, check_roll_range_validity
 
 st.set_page_config(page_title="Bulk", page_icon="📖", layout="centered")
 
@@ -42,16 +42,19 @@ if st.session_state.flag_b == 0:
                 st.error('First 8 characters of roll numbers should be same.')
                 st.stop()
             pattern = r'^\d+A\d+\w*$'
-            if re.match(pattern, roll_number_first.upper()) and re.match(pattern, roll_number_last.upper()) and len(
+            if re.match(pattern, roll_number_first) and re.match(pattern, roll_number_last) and len(
                     roll_number_first) == 10 and len(roll_number_last) == 10:
+                if not check_roll_range_validity(roll_number_first, roll_number_last):
+                    st.error('Invalid roll number range. Please enter a valid range.')
+                    st.stop()
                 bulk_roll_count = bulk_rolls_count(roll_number_first, roll_number_last)
                 exceed_status = False
                 if bulk_roll_count["status"] == "exceeded":
                     exceed_status = True
                     roll_number_last = bulk_roll_count["roll"].upper()
                 st.session_state.pdf_data_b = {
-                    "roll_number_first": roll_number_first.upper(),
-                    "roll_number_last": roll_number_last.upper(),
+                    "roll_number_first": roll_number_first,
+                    "roll_number_last": roll_number_last,
                     "exceeded": exceed_status
                 }
                 st.session_state.flag_b = 1

@@ -116,3 +116,20 @@ def search_bulk_worksheet_v2(roll_f, roll_l, sem, sub, week):
         return res.json()
     else:
         return None
+
+
+def roll_to_number(roll):
+    if roll.isdigit():
+        return int(roll)
+    else:
+        return (ord(roll[0]) - 64) * 10 + int(roll[1])
+
+
+def check_roll_range_validity(roll_f, roll_l):
+    roll_f = roll_f.upper()[8:]
+    roll_l = roll_l.upper()[8:]
+    roll_count = [roll_to_number(roll_f), roll_to_number(roll_l)]
+    if roll_count[0] > roll_count[1]:
+        return False
+    else:
+        return True
