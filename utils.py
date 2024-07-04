@@ -54,19 +54,6 @@ def next_roll(roll):
         return roll[:8] + "00"
 
 
-def bulk_rolls(from_roll, to_roll):
-    from_roll = from_roll.upper()
-    to_roll = to_roll.upper()
-    roll = []
-    current_roll = from_roll
-
-    while current_roll != next_roll(to_roll) and len(roll) <= 80:
-        roll.append(current_roll)
-        current_roll = next_roll(current_roll)
-
-    return roll
-
-
 def bulk_rolls_count(from_roll, to_roll):
     from_roll = from_roll.upper()
     to_roll = to_roll.upper()
@@ -86,20 +73,6 @@ def bulk_rolls_count(from_roll, to_roll):
             "status": "exceeded",
             "roll": roll[-1].upper()
         }
-
-
-def search_bulk_worksheet(rolls, sem, sub, week):
-    pdf_urls = []
-    for roll in rolls:
-        pdf_url = search_specific_worksheet(roll, sem, sub, week)
-        if pdf_url:
-            pdf_urls.append([roll, pdf_url])
-        else:
-            pdf_urls.append([roll, "Not found"])
-    if len(pdf_urls) == 0:
-        return None
-    else:
-        return pdf_urls
 
 
 def search_bulk_worksheet_v2(roll_f, roll_l, sem, sub, week):
