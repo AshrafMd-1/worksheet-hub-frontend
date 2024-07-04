@@ -16,3 +16,12 @@ st.write('Search for a worksheet by roll number.')
 
 st.header('Bulk Search')
 st.write('Search for multiple worksheets by a range of roll numbers.')
+
+st.sidebar.markdown("""
+<style>
+    a[href="https://streamlit.io/cloud"] {
+        display: none;
+    }
+</style>
+""", unsafe_allow_html=True)
+
