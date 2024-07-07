@@ -49,7 +49,7 @@ def next_roll(roll):
     elif int(roll[9]) < 9:
         return roll[:9] + str(int(roll[9]) + 1)
     elif roll[9] == "9" and roll[8] != "Z":
-        return chr(ord(roll[8]) + 1) + "0"
+        return roll[:8] + chr(ord(roll[8]) + 1) + "0"
     elif roll[8] == "Z":
         return roll[:8] + "00"
 
