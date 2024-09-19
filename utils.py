@@ -76,7 +76,7 @@ def bulk_rolls_count(from_roll, to_roll):
 
 
 def search_bulk_worksheet_v2(roll_f, roll_l, sem, sub, week):
-    pdf_url = f"https://worksheethub-1-v9612928.deta.app/bulk"
+    pdf_url = f"https://arorium.pythonanywhere.com/bulk"
     payload = {
         "roll_f": roll_f,
         "roll_l": roll_l,
