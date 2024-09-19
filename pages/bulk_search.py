@@ -67,7 +67,7 @@ if st.session_state.flag_b > 0:
     st.text_input('Roll number last', value=st.session_state.pdf_data_b["roll_number_last"], key=2, disabled=True)
     if st.session_state.pdf_data_b["exceeded"]:
         st.info(
-            f"You can search for maximum 80 roll numbers. Auto assigned to {st.session_state.pdf_data_b['roll_number_last']}")
+            f"You can search for maximum 40 roll numbers. Auto assigned to {st.session_state.pdf_data_b['roll_number_last']}")
     edit = st.button('Edit')
     if edit:
         st.session_state.flag_b = 0
